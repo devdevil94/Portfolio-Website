@@ -3,6 +3,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+.home {
+  height: 90vh;
+  width: 100%;
+  position: absolute;
+}
+.home-content {
+  display: flex;
+  justify-content: space-evenly;
+}
+.home {
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
 
 
 /*# sourceMappingURL=/main.d4190f58.css.map */

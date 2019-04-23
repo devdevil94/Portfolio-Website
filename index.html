@@ -12,7 +12,24 @@
     <title>Saud Al-Alawi</title>
   </head>
   <body>
-    <h1>Hello, World!</h1>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <main data-router-wrapper>
+      <section class="home" data-router-view="home">
+        <div class="home-content">
+          <div class="home-present">
+            <h3>Home Page</h3>
+            <p>Hello! Nice to see you here</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./js/index.js"></script>
   </body>
