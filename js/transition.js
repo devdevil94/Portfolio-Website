@@ -10,7 +10,7 @@ export default class Fade extends Highway.Transition {
         0.5,
         { height: "2vh" },
         {
-          height: "90vh",
+          height: "100vh",
           top: "10%",
           onComplete: () => {
             from.remove();
