@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/devdevil94/Portfolio-Website/issues"
   },
-  "homepage": "https://github.com/devdevil94/Portfolio-Website#readme"
+  "homepage": "https://github.com/devdevil94/Portfolio-Website#readme",
+  "dependencies": {
+    "gsap": "^2.1.2"
+  }
 }
