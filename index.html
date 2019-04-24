@@ -16,7 +16,7 @@
       <div class="nav-wrapper">
         <a href="#!" class="brand-logo center">Logo</a>
         <ul class="right">
-          <li><a href="./index.html">HOME</a></li>
+          <li class="active"><a href="./index.html">HOME</a></li>
           <li><a href="./about.html">ABOUT ME</a></li>
           <li><a href="./portfolio.html">PORTFOLIO</a></li>
           <li><a href="./contact.html">CONTACT ME</a></li>
@@ -25,15 +25,27 @@
     </nav>
     <main data-router-wrapper>
       <section class="home" data-router-view="home">
-        <div class="home-content">
-          <div class="home-inner">
-            <img
-              src="./images/potfolio_avatar.jpg"
-              alt=""
-              class="circle responsive-img"
-            />
-            <h2>Saud Al Alawi</h2>
-            <h4>Freelance web developer and wordpress developer</h4>
+        <div class="home-content valign-wrapper">
+          <div class="home-inner container">
+            <div class="row">
+              <div
+                class="col xl4 lg2 m4 s4 offset-xl4 offset-lg4 offset-m4 offset-s4"
+              >
+                <img
+                  src="./images/potfolio_avatar.jpg"
+                  alt="avatar"
+                  class="circle responsive-img"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div
+                class="col xl6 lg6 m4 s4 offset-xl3 offset-lg3 offset-m4 offset-s4"
+              >
+                <h2>Saud Al-Alawi</h2>
+                <h4>Wordpress Theme Developer</h4>
+              </div>
+            </div>
           </div>
         </div>
       </section>
