@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/main.d4190f58.css">
     <title>Saud Al-Alawi</title>
   </head>
@@ -27,8 +28,32 @@
             <div class="row">
               <div class="center-align col xl6 lg4 m4 s4 offset-xl3">
                 <h3>CONTACT ME</h3>
-                <h5>Email: saudd2gh@gmail.com</h5>
-                <h5>Upwork: saudd2gh@gmail.com</h5>
+                <div class="row">
+                  <form class="col s12">
+                    <div class="row">
+                      <div class="input-field col s6">
+                        <input id="name" type="text" class="validate">
+                        <label for="name">Name</label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <input id="email" type="email" class="validate">
+                        <label for="email">Email</label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <textarea id="textarea1" class="materialize-textarea"></textarea>
+                        <label for="textarea1">Message</label>
+                      </div>
+                    </div>
+                    <button class="btn-flat waves-effect waves-light" type="submit" name="action">
+                      Submit
+                      <i class="material-icons right">send</i>
+                    </button>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
