@@ -18,8 +18,11 @@ nav {
 .marginTop {
   margin-top: 15vh;
 }
-.home-inner .row .col a {
+#resume-btn {
   border: 1px solid white;
   border-radius: 5px;
   color: white;
+}
+#social-accounts {
+  margin-top: 20px;
 }
