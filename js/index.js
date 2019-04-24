@@ -1,5 +1,5 @@
 import Highway from "@dogstudio/highway";
-import PageTransition from "./transition";
+import PageTransition from "./transitions";
 
 const H = new Highway.Core({
   transitions: {

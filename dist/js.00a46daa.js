@@ -15932,7 +15932,7 @@ var _EasePack = require("./EasePack.js");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
-},{"./TweenLite.js":"node_modules/gsap/TweenLite.js","./TimelineLite.js":"node_modules/gsap/TimelineLite.js","./TimelineMax.js":"node_modules/gsap/TimelineMax.js","./TweenMax.js":"node_modules/gsap/TweenMax.js","./CSSPlugin.js":"node_modules/gsap/CSSPlugin.js","./AttrPlugin.js":"node_modules/gsap/AttrPlugin.js","./RoundPropsPlugin.js":"node_modules/gsap/RoundPropsPlugin.js","./DirectionalRotationPlugin.js":"node_modules/gsap/DirectionalRotationPlugin.js","./BezierPlugin.js":"node_modules/gsap/BezierPlugin.js","./EasePack.js":"node_modules/gsap/EasePack.js"}],"js/transition.js":[function(require,module,exports) {
+},{"./TweenLite.js":"node_modules/gsap/TweenLite.js","./TimelineLite.js":"node_modules/gsap/TimelineLite.js","./TimelineMax.js":"node_modules/gsap/TimelineMax.js","./TweenMax.js":"node_modules/gsap/TweenMax.js","./CSSPlugin.js":"node_modules/gsap/CSSPlugin.js","./AttrPlugin.js":"node_modules/gsap/AttrPlugin.js","./RoundPropsPlugin.js":"node_modules/gsap/RoundPropsPlugin.js","./DirectionalRotationPlugin.js":"node_modules/gsap/DirectionalRotationPlugin.js","./BezierPlugin.js":"node_modules/gsap/BezierPlugin.js","./EasePack.js":"node_modules/gsap/EasePack.js"}],"js/transitions.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -16020,16 +16020,16 @@ exports.default = PageTransition;
 
 var _highway = _interopRequireDefault(require("@dogstudio/highway"));
 
-var _transition = _interopRequireDefault(require("./transition"));
+var _transitions = _interopRequireDefault(require("./transitions"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var H = new _highway.default.Core({
   transitions: {
-    default: _transition.default
+    default: _transitions.default
   }
 });
-},{"@dogstudio/highway":"node_modules/@dogstudio/highway/build/highway.js","./transition":"js/transition.js"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"@dogstudio/highway":"node_modules/@dogstudio/highway/build/highway.js","./transitions":"js/transitions.js"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
