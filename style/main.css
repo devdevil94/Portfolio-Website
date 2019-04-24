@@ -27,3 +27,10 @@ nav {
 #social-accounts {
   margin-top: 20px;
 }
+
+#toast-container {
+  top: auto !important;
+  right: auto !important;
+  bottom: 90%;
+  left: auto !important;
+}

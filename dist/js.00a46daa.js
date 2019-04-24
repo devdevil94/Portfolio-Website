@@ -16029,16 +16029,17 @@ var H = new _highway.default.Core({
     default: _transitions.default
   }
 }); // Initialize Firebase
-//  var config = {
-//   apiKey: "AIzaSyDejbSdlutY0ZJAj6cl6f2KET68qUkPOiY",
-//   authDomain: "portfolio-contact-form-8a905.firebaseapp.com",
-//   databaseURL: "https://portfolio-contact-form-8a905.firebaseio.com",
-//   projectId: "portfolio-contact-form-8a905",
-//   storageBucket: "portfolio-contact-form-8a905.appspot.com",
-//   messagingSenderId: "932210990533"
-// };
-// firebase.initializeApp(config);
 
+var config = {
+  apiKey: "AIzaSyDejbSdlutY0ZJAj6cl6f2KET68qUkPOiY",
+  authDomain: "portfolio-contact-form-8a905.firebaseapp.com",
+  databaseURL: "https://portfolio-contact-form-8a905.firebaseio.com",
+  projectId: "portfolio-contact-form-8a905",
+  storageBucket: "portfolio-contact-form-8a905.appspot.com",
+  messagingSenderId: "932210990533"
+};
+firebase.initializeApp(config);
+var messagesRef = firebase.database().ref("messages");
 document.getElementById("contact-form").addEventListener("submit", function (e) {
   submitForm(e);
 });
@@ -16048,9 +16049,23 @@ var submitForm = function submitForm(e) {
   var name = document.getElementById("name").value;
   var email = document.getElementById("email").value;
   var message = document.getElementById("message").value;
-  console.log(name);
-  console.log(email);
-  console.log(message);
+  saveMessage(name, email, message);
+  setTimeout(function () {
+    document.getElementById("contact-form").reset();
+  }, 1000);
+  M.toast({
+    html: "Your message has been sent",
+    displayLength: 2500
+  });
+};
+
+var saveMessage = function saveMessage(name, email, message) {
+  var newMessageRef = messagesRef.push();
+  newMessageRef.set({
+    name: name,
+    email: email,
+    message: message
+  });
 };
 },{"@dogstudio/highway":"node_modules/@dogstudio/highway/build/highway.js","./transitions":"js/transitions.js"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
