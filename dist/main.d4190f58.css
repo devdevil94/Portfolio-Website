@@ -18,7 +18,8 @@ nav {
 .marginTop {
   margin-top: 15vh;
 }
-#resume-btn {
+#resume-btn,
+#submit-contact-btn {
   border: 1px solid white;
   border-radius: 5px;
   color: white;

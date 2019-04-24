@@ -35,7 +35,7 @@
               <div class="center-align col xl6 lg4 m4 s4 offset-xl3">
                 <h3>CONTACT ME</h3>
                 <div class="row">
-                  <form class="col s12">
+                  <form id="contact-form" class="col s12">
                     <div class="row">
                       <div class="input-field col s6">
                         <input id="name" type="text" class="validate" />
@@ -58,6 +58,7 @@
                       </div>
                     </div>
                     <button
+                      id="submit-contact-btn"
                       class="btn-flat waves-effect waves-light"
                       type="submit"
                       name="action"
@@ -74,6 +75,7 @@
       </section>
     </main>
 
+    <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./js/index.js"></script>
   </body>
