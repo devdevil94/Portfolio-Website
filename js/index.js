@@ -1,8 +1,8 @@
 import Highway from "@dogstudio/highway";
-import Fade from "./transition";
+import PageTransition from "./transition";
 
 const H = new Highway.Core({
   transitions: {
-    default: Fade
+    default: PageTransition
   }
 });

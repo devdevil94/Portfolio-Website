@@ -3,21 +3,16 @@
   padding: 0;
   box-sizing: border-box;
 }
-.home,
-.blog {
+body {
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+nav {
+  background-image: inherit;
+}
+.home {
   height: 90vh;
   width: 100%;
   position: absolute;
   text-align: center;
 }
-.home-content,
-.blog-content {
-  display: flex;
-  justify-content: space-evenly;
-}
-.home {
-  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
-}
-.blog {
-  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
-}
+.home-;

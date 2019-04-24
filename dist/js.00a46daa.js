@@ -15964,18 +15964,18 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var Fade =
+var PageTransition =
 /*#__PURE__*/
 function (_Highway$Transition) {
-  _inherits(Fade, _Highway$Transition);
+  _inherits(PageTransition, _Highway$Transition);
 
-  function Fade() {
-    _classCallCheck(this, Fade);
+  function PageTransition() {
+    _classCallCheck(this, PageTransition);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Fade).apply(this, arguments));
+    return _possibleConstructorReturn(this, _getPrototypeOf(PageTransition).apply(this, arguments));
   }
 
-  _createClass(Fade, [{
+  _createClass(PageTransition, [{
     key: "in",
     value: function _in(_ref) {
       var from = _ref.from,
@@ -16011,10 +16011,10 @@ function (_Highway$Transition) {
     }
   }]);
 
-  return Fade;
+  return PageTransition;
 }(_highway.default.Transition);
 
-exports.default = Fade;
+exports.default = PageTransition;
 },{"@dogstudio/highway":"node_modules/@dogstudio/highway/build/highway.js","gsap":"node_modules/gsap/index.js"}],"js/index.js":[function(require,module,exports) {
 "use strict";
 
@@ -16057,7 +16057,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53417" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58818" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
