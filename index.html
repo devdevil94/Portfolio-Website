@@ -18,6 +18,16 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+    />
     <link rel="stylesheet" href="./style/main.css" />
 
     <title>Saud Al-Alawi</title>
@@ -35,7 +45,7 @@
       </div>
     </nav>
     <main>
-      <section id="home">
+      <section id="home" class="hide">
         <div class="home-content container marginTop">
           <div class="row">
             <div id="" class="col xl12 lg12 m12 s12">
@@ -75,7 +85,23 @@
           </div>
         </div>
       </section>
-      <section id="portfolio" class="hide"></section>
+      <section id="portfolio" class="">
+        <div class="portfolio-content container marginTop">
+          <div class="row">
+            <div class="col xl12 lg12 m12 s12">
+              <h3>PORTFOLIO</h3>
+              <div class="carousel">
+                <div><h3>1</h3></div>
+                <div><h3>2</h3></div>
+                <div><h3>3</h3></div>
+                <div><h3>4</h3></div>
+                <div><h3>5</h3></div>
+                <div><h3>6</h3></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section id="contact" class="hide">
         <div class="contact-content container marginTop">
           <div class="row">
@@ -127,8 +153,11 @@
       </section>
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-    <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script> -->
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./js/index.js"></script>
   </body>

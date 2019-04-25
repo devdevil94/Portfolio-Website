@@ -1,15 +1,14 @@
-import Highway from "@dogstudio/highway";
-import PageTransition from "./transitions";
-import createPortfolio from "./projects";
-// import $ from "jquery";
+// import Highway from "@dogstudio/highway";
+// import PageTransition from "./transitions";
+// import createPortfolio from "./projects";
 
-const H = new Highway.Core({
-  transitions: {
-    default: PageTransition
-  }
-});
+// const H = new Highway.Core({
+//   transitions: {
+//     default: PageTransition
+//   }
+// });
 
-createPortfolio();
+// createPortfolio();
 
 // Initialize Firebase
 var config = {
@@ -20,45 +19,46 @@ var config = {
   storageBucket: "portfolio-contact-form-8a905.appspot.com",
   messagingSenderId: "932210990533"
 };
-firebase.initializeApp(config);
+// firebase.initializeApp(config);
 
-const messagesRef = firebase.database().ref("messages");
+// const messagesRef = firebase.database().ref("messages");
 
 $(document).ready(function() {
   const protfolioLink = $("nav div ul li")[2];
-  protfolioLink.click(() => {
-    $(".carousel").slick({
-      dots: true,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 2000,
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3
-          }
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
-      ]
-    });
+
+  $(".carousel").slick({
+    dots: true,
+    arrows: true
+    // slidesToShow: 3,
+    // slidesToScroll: 1,
+    // autoplay: true,
+    // autoplaySpeed: 2000,
+    // responsive: [
+    //   {
+    //     breakpoint: 1024,
+    //     settings: {
+    //       slidesToShow: 3,
+    //       slidesToScroll: 3
+    //     }
+    //   },
+    //   {
+    //     breakpoint: 600,
+    //     settings: {
+    //       slidesToShow: 2,
+    //       slidesToScroll: 2
+    //     }
+    //   },
+    //   {
+    //     breakpoint: 480,
+    //     settings: {
+    //       slidesToShow: 1,
+    //       slidesToScroll: 1
+    //     }
+    //   }
+    // ]
   });
 });
+
 // document.getElementById("contact-form").addEventListener("submit", e => {
 //   submitForm(e);
 // });
