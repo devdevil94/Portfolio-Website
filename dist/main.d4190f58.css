@@ -9,14 +9,15 @@ body {
 nav {
   background-image: inherit;
 }
-.home {
+.home,
+.portfolio {
   height: 90vh;
   width: 100%;
   position: absolute;
   text-align: center;
 }
 .marginTop {
-  margin-top: 15vh;
+  margin-top: 10vh;
 }
 #resume-btn,
 #submit-contact-btn {

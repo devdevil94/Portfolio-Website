@@ -1,5 +1,7 @@
 import Highway from "@dogstudio/highway";
 import PageTransition from "./transitions";
+import createPortfolio from "./projects";
+import $ from "jquery";
 
 const H = new Highway.Core({
   transitions: {
@@ -8,7 +10,8 @@ const H = new Highway.Core({
 });
 
 const navLinks = document.querySelectorAll("nav div ul li");
-console.log(document);
+
+createPortfolio();
 // navLinks.forEach(link => {
 //   deactivateLinks();
 //   link.classList.add("active");
@@ -53,6 +56,11 @@ const submitForm = e => {
 
   M.toast({ html: "Your message has been sent", displayLength: 2500 });
 };
+
+var instance = M.Carousel.init({
+  fullWidth: true,
+  indicators: true
+});
 
 const saveMessage = (name, email, message) => {
   let newMessageRef = messagesRef.push();

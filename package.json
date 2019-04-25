@@ -18,6 +18,7 @@
   "homepage": "https://github.com/devdevil94/Portfolio-Website#readme",
   "dependencies": {
     "@dogstudio/highway": "^2.1.2",
-    "gsap": "^2.1.2"
+    "gsap": "^2.1.2",
+    "jquery": "^3.4.0"
   }
 }
