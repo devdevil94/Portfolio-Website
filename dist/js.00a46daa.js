@@ -16051,18 +16051,7 @@ var H = new _highway.default.Core({
     default: _transitions.default
   }
 });
-(0, _projects.default)(); // navLinks.forEach(link => {
-//   deactivateLinks();
-//   link.classList.add("active");
-// });
-// function deactivateLinks() {
-//   navLinks.forEach(link => {
-//     if (link.classList.contains("active")) {
-//       link.classList.remove("active");
-//     }
-//   });
-// }
-// Initialize Firebase
+(0, _projects.default)(); // Initialize Firebase
 
 var config = {
   apiKey: "AIzaSyDejbSdlutY0ZJAj6cl6f2KET68qUkPOiY",

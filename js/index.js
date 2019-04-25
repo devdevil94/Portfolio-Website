@@ -10,18 +10,6 @@ const H = new Highway.Core({
 });
 
 createPortfolio();
-// navLinks.forEach(link => {
-//   deactivateLinks();
-//   link.classList.add("active");
-// });
-
-// function deactivateLinks() {
-//   navLinks.forEach(link => {
-//     if (link.classList.contains("active")) {
-//       link.classList.remove("active");
-//     }
-//   });
-// }
 
 // Initialize Firebase
 var config = {
