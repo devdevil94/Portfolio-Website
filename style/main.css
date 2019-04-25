@@ -9,7 +9,7 @@ body {
 nav {
   background-image: inherit;
 }
-.home,
+#home,
 .portfolio {
   height: 90vh;
   width: 100%;
