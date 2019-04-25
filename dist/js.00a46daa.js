@@ -16028,7 +16028,20 @@ var H = new _highway.default.Core({
   transitions: {
     default: _transitions.default
   }
-}); // Initialize Firebase
+});
+var navLinks = document.querySelectorAll("nav div ul li");
+console.log(document); // navLinks.forEach(link => {
+//   deactivateLinks();
+//   link.classList.add("active");
+// });
+// function deactivateLinks() {
+//   navLinks.forEach(link => {
+//     if (link.classList.contains("active")) {
+//       link.classList.remove("active");
+//     }
+//   });
+// }
+// Initialize Firebase
 
 var config = {
   apiKey: "AIzaSyDejbSdlutY0ZJAj6cl6f2KET68qUkPOiY",
