@@ -1,15 +1,3 @@
-// import Highway from "@dogstudio/highway";
-// import PageTransition from "./transitions";
-// import createPortfolio from "./projects";
-
-// const H = new Highway.Core({
-//   transitions: {
-//     default: PageTransition
-//   }
-// });
-
-// createPortfolio();
-
 // Initialize Firebase
 var config = {
   apiKey: "AIzaSyDejbSdlutY0ZJAj6cl6f2KET68qUkPOiY",
@@ -24,6 +12,48 @@ var config = {
 // const messagesRef = firebase.database().ref("messages");
 
 $(document).ready(function() {
+  createPortfolio();
+  $(".carousel").slick({
+    dots: true,
+    arrows: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  });
+
+  const navLinks = $("#nav-links li a");
+
+  navLinks.click(e => {
+    $("#nav-links")
+      .find("li.active")
+      .removeClass("active");
+    $(e.target)
+      .parent("li")
+      .addClass("active");
+  });
+  // navLinks[0].click(() => {
+  //   console.log(navLinks[0]);
+  //   deavtivateNavLinks(navLinks);
+  //   link.addClass("active");
+  // });
+
+  // $.each(navLinks, (i, link) => {
+  //   link.click(() => {
+  //     console.log(link);
+  //     deavtivateNavLinks(navLinks);
+  //     link.addClass("active");
+  //   });
+  // });
+});
+
+const deavtivateNavLinks = navLinks => {
+  $.each(navLinks, (i, link) => {
+    console.log(link);
+    if (link.hasClass("active")) {
+      link.removeClass("active");
+    }
+  });
+};
+const createPortfolio = () => {
   for (let i = 0; i < projects.length; i++) {
     const { title } = projects[i];
     const titleHeader = $("<h4></h4>").text(title);
@@ -37,15 +67,7 @@ $(document).ready(function() {
     outerDiv.append(mainRowDiv);
     $(".carousel").append(outerDiv);
   }
-
-  $(".carousel").slick({
-    dots: true,
-    arrows: true,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  });
-});
-
+};
 const createProjectInfoDiv = project => {
   const { skills, description } = project;
   const skillsList = $("<ul></ul>");
