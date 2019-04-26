@@ -24,17 +24,19 @@ var config = {
 // const messagesRef = firebase.database().ref("messages");
 
 $(document).ready(function() {
-  const { title } = projects[0];
-  const titleHeader = $("<h4></h4>").text(title);
+  for (let i = 0; i < projects.length; i++) {
+    const { title } = projects[i];
+    const titleHeader = $("<h4></h4>").text(title);
 
-  const mainRowDiv = $("<div></div>").addClass("row");
-  // mainRowDiv;
-  mainRowDiv.append(createProjectInfoDiv());
-  mainRowDiv.append(createMockupDiv());
-  const outerDiv = $("<div></div>");
-  outerDiv.append(titleHeader);
-  outerDiv.append(mainRowDiv);
-  $(".carousel").append(outerDiv);
+    const mainRowDiv = $("<div></div>").addClass("row");
+    mainRowDiv.append(createProjectInfoDiv(projects[i]));
+    mainRowDiv.append(createMockupDiv(projects[i]));
+
+    const outerDiv = $("<div></div>");
+    outerDiv.append(titleHeader);
+    outerDiv.append(mainRowDiv);
+    $(".carousel").append(outerDiv);
+  }
 
   $(".carousel").slick({
     dots: true,
@@ -44,8 +46,8 @@ $(document).ready(function() {
   });
 });
 
-const createProjectInfoDiv = () => {
-  const { skills, description } = projects[0];
+const createProjectInfoDiv = project => {
+  const { skills, description } = project;
   const skillsList = $("<ul></ul>");
 
   for (let i = 0; i < skills.length; i++) {
@@ -59,13 +61,13 @@ const createProjectInfoDiv = () => {
   infoColDiv.append(descParagraph);
   infoColDiv.append(skillsHeader);
   infoColDiv.append(skillsList);
-  infoColDiv.append(createProjectButtonsDiv());
+  infoColDiv.append(createProjectButtonsDiv(project));
 
   return infoColDiv;
 };
 
-const createMockupDiv = () => {
-  const { imgSrc } = projects[0];
+const createMockupDiv = project => {
+  const { imgSrc } = project;
   const mockupImg = $("<img>")
     .attr("src", imgSrc)
     .addClass("responsive-img");
@@ -76,8 +78,8 @@ const createMockupDiv = () => {
   return mockupColDiv;
 };
 
-const createProjectButtonsDiv = () => {
-  const { repo, demolink } = projects[0];
+const createProjectButtonsDiv = project => {
+  const { repo, demolink } = project;
 
   const viewCodeBtn = $("<a></a>")
     .attr({

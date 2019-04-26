@@ -68,5 +68,5 @@ nav {
 .slick-slide {
   text-align: center;
   color: white;
-  background: #a2abb3;
+  background: inherit;
 }
