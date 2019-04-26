@@ -19,6 +19,9 @@ nav {
 .marginTop {
   margin-top: 10vh;
 }
+.section-title {
+  text-align: center;
+}
 #resume-btn,
 #submit-contact-btn {
   border: 1px solid white;
@@ -34,4 +37,34 @@ nav {
   right: auto !important;
   bottom: 90%;
   left: auto !important;
+}
+.slick-slide {
+  text-align: center;
+  color: white;
+  background: #a2abb3;
+}
+
+.carousel {
+  position: relative;
+}
+.slick-prev,
+.slick-next {
+  position: absolute;
+  top: 50%;
+}
+.slick-prev {
+  left: 1px;
+  z-index: 10;
+  /* background-color: #419be0; */
+}
+.slick-next {
+  right: 1px;
+  z-index: 10;
+  /* background-color: #419be0; */
+}
+.slick-dots {
+  background-color: #419be0;
+}
+.project-info {
+  padding-left: 30px !important;
 }
