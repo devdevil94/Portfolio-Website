@@ -12,13 +12,7 @@ var config = {
 // const messagesRef = firebase.database().ref("messages");
 
 $(document).ready(function() {
-  createPortfolio();
-  $(".carousel").slick({
-    dots: true,
-    arrows: true,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  });
+  let portfolioCreated = false;
 
   const navLinks = $("#nav-links li a");
 
@@ -29,30 +23,53 @@ $(document).ready(function() {
     $(e.target)
       .parent("li")
       .addClass("active");
-  });
-  // navLinks[0].click(() => {
-  //   console.log(navLinks[0]);
-  //   deavtivateNavLinks(navLinks);
-  //   link.addClass("active");
-  // });
 
-  // $.each(navLinks, (i, link) => {
-  //   link.click(() => {
-  //     console.log(link);
-  //     deavtivateNavLinks(navLinks);
-  //     link.addClass("active");
-  //   });
-  // });
-});
+    const page = $(e.target).text();
 
-const deavtivateNavLinks = navLinks => {
-  $.each(navLinks, (i, link) => {
-    console.log(link);
-    if (link.hasClass("active")) {
-      link.removeClass("active");
+    switch (page) {
+      case "HOME":
+        $("#home").removeClass("hide");
+        $("#home")
+          .siblings("section")
+          .addClass("hide");
+        break;
+
+      case "ABOUT":
+        $("#about").removeClass("hide");
+        $("#about")
+          .siblings("section")
+          .addClass("hide");
+        break;
+
+      case "PORTFOLIO":
+        $("#portfolio").removeClass("hide");
+        $("#portfolio")
+          .siblings("section")
+          .addClass("hide");
+
+        if (!portfolioCreated) {
+          createPortfolio();
+          $(".carousel").slick({
+            dots: true,
+            arrows: true,
+            slidesToShow: 1,
+            slidesToScroll: 1
+          });
+
+          portfolioCreated = true;
+        }
+        break;
+      case "CONTACT":
+        $("#contact").removeClass("hide");
+        $("#contact")
+          .siblings("section")
+          .addClass("hide");
+
+        break;
     }
   });
-};
+});
+
 const createPortfolio = () => {
   for (let i = 0; i < projects.length; i++) {
     const { title } = projects[i];
