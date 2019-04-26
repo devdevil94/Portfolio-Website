@@ -39,6 +39,7 @@ $(document).ready(function() {
         $("#about")
           .siblings("section")
           .addClass("hide");
+        $("#about").fadeIn(1000);
         break;
 
       case "PORTFOLIO":

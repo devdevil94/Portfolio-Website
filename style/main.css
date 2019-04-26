@@ -60,7 +60,7 @@ nav {
   /* background-color: #419be0; */
 }
 .slick-dots {
-  background-color: #419be0;
+  bottom: 10px;
 }
 .project-info {
   padding-left: 35px !important;
