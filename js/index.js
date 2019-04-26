@@ -24,15 +24,13 @@ var config = {
 // const messagesRef = firebase.database().ref("messages");
 
 $(document).ready(function() {
-  const protfolioLink = $("nav div ul li")[2];
-
   $(".carousel").slick({
     dots: true,
-    arrows: true
-    // slidesToShow: 3,
-    // slidesToScroll: 1,
+    arrows: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
     // autoplay: true,
-    // autoplaySpeed: 2000,
+    // autoplaySpeed: 1000,
     // responsive: [
     //   {
     //     breakpoint: 1024,
