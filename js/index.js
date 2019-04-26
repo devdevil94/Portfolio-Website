@@ -24,38 +24,44 @@ var config = {
 // const messagesRef = firebase.database().ref("messages");
 
 $(document).ready(function() {
+  const { title } = projects[0];
+  const titleHeader = $("<h4></h4>").text(title);
+
+  const mainRowDiv = $("<div></div>");
+  mainRowDiv.addClass("row");
+  mainRowDiv.append(createProjectInfoSection());
+
+  const outerDiv = $("<div></div>");
+  outerDiv.append(titleHeader);
+  outerDiv.append(mainRowDiv);
+  $(".carousel").append(outerDiv);
+
   $(".carousel").slick({
     dots: true,
     arrows: true,
     slidesToShow: 1,
     slidesToScroll: 1
-    // autoplay: true,
-    // autoplaySpeed: 1000,
-    // responsive: [
-    //   {
-    //     breakpoint: 1024,
-    //     settings: {
-    //       slidesToShow: 3,
-    //       slidesToScroll: 3
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 600,
-    //     settings: {
-    //       slidesToShow: 2,
-    //       slidesToScroll: 2
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 480,
-    //     settings: {
-    //       slidesToShow: 1,
-    //       slidesToScroll: 1
-    //     }
-    //   }
-    // ]
   });
 });
+
+const createProjectInfoSection = () => {
+  const { skills, description } = projects[0];
+  const skillsList = $("<ul></ul>");
+
+  for (let i = 0; i < skills.length; i++) {
+    const skillItem = $("<li></li>").text(skills[i]);
+    skillsList.append(skillItem);
+  }
+  const descParagraph = $("<p></p>").text(description);
+  const skillsHeader = $("<h5></h5>").text("Skills");
+  const infoColDiv = $("<div></div>");
+  infoColDiv.attr("class", "col xl6 lg6 left-align project-info");
+  infoColDiv.append(descParagraph);
+  infoColDiv.append(skillsHeader);
+  infoColDiv.append(skillsList);
+
+  return infoColDiv;
+};
 
 // document.getElementById("contact-form").addEventListener("submit", e => {
 //   submitForm(e);
