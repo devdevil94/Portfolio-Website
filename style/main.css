@@ -23,7 +23,9 @@ nav {
   text-align: center;
 }
 #resume-btn,
-#submit-contact-btn {
+#submit-contact-btn,
+#view-code-btn,
+#visit-website-btn {
   border: 1px solid white;
   border-radius: 5px;
   color: white;
@@ -37,11 +39,6 @@ nav {
   right: auto !important;
   bottom: 90%;
   left: auto !important;
-}
-.slick-slide {
-  text-align: center;
-  color: white;
-  background: #a2abb3;
 }
 
 .carousel {
@@ -67,4 +64,9 @@ nav {
 }
 .project-info {
   padding-left: 35px !important;
+}
+.slick-slide {
+  text-align: center;
+  color: white;
+  background: #a2abb3;
 }

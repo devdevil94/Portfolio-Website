@@ -1,9 +1,9 @@
 const projects = [
   {
-    title: "Omanova Travel Agency Theme",
+    title: "Travel Agency Website",
     description:
       "Lorem ipsum dolor sit amet, vidisse corpora intellegebat ne pri. Eam at quod iudicabit definitiones, at graeci vidisse oblique has.",
-    imgUrl: "../images/portfolio_avatar.jpg",
+    imgSrc: "../images/smartmockups_jux4p0lc.png",
     skills: ["WordPress", "HTML", "Javascript", "CSS", "Materialize CSS"],
     repo: "#",
     demolink: "#"
