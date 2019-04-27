@@ -1,28 +1,3 @@
-import Highway from "@dogstudio/highway";
-import PageTransition from "./transitions";
-import createPortfolio from "./projects";
-// import $ from "jquery";
-
-const H = new Highway.Core({
-  transitions: {
-    default: PageTransition
-  }
-});
-
-createPortfolio();
-// navLinks.forEach(link => {
-//   deactivateLinks();
-//   link.classList.add("active");
-// });
-
-// function deactivateLinks() {
-//   navLinks.forEach(link => {
-//     if (link.classList.contains("active")) {
-//       link.classList.remove("active");
-//     }
-//   });
-// }
-
 // Initialize Firebase
 var config = {
   apiKey: "AIzaSyDejbSdlutY0ZJAj6cl6f2KET68qUkPOiY",
@@ -32,45 +7,70 @@ var config = {
   storageBucket: "portfolio-contact-form-8a905.appspot.com",
   messagingSenderId: "932210990533"
 };
-firebase.initializeApp(config);
+// firebase.initializeApp(config);
 
-const messagesRef = firebase.database().ref("messages");
+// const messagesRef = firebase.database().ref("messages");
 
 $(document).ready(function() {
-  const protfolioLink = $("nav div ul li")[2];
-  protfolioLink.click(() => {
-    $(".carousel").slick({
-      dots: true,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 2000,
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3
-          }
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
+  let portfolioCreated = false;
+
+  const navLinks = $("#nav-links li a");
+
+  navLinks.click(e => {
+    $("#nav-links")
+      .find("li.active")
+      .removeClass("active");
+    $(e.target)
+      .parent("li")
+      .addClass("active");
+
+    const page = $(e.target).text();
+
+    switch (page) {
+      case "HOME":
+        $("#home").removeClass("hide");
+        $("#home")
+          .siblings("section")
+          .addClass("hide");
+        break;
+
+      case "ABOUT":
+        $("#about").removeClass("hide");
+        $("#about")
+          .siblings("section")
+          .addClass("hide");
+        $("#about").fadeIn(1000);
+        break;
+
+      case "PORTFOLIO":
+        $("#portfolio").removeClass("hide");
+        $("#portfolio")
+          .siblings("section")
+          .addClass("hide");
+
+        if (!portfolioCreated) {
+          createPortfolio();
+          $(".carousel").slick({
+            dots: true,
+            arrows: true,
             slidesToShow: 1,
             slidesToScroll: 1
-          }
+          });
+
+          portfolioCreated = true;
         }
-      ]
-    });
+        break;
+      case "CONTACT":
+        $("#contact").removeClass("hide");
+        $("#contact")
+          .siblings("section")
+          .addClass("hide");
+
+        break;
+    }
   });
 });
+
 // document.getElementById("contact-form").addEventListener("submit", e => {
 //   submitForm(e);
 // });

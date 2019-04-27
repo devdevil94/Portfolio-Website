@@ -4,12 +4,19 @@
   box-sizing: border-box;
 }
 body {
-  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  /* background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%); */
+  /* background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%); */
+  background-image: linear-gradient(to right, #09203f 0%, #537895 100%);
 }
 nav {
   background-image: inherit;
+  padding: 0 5%;
 }
-.home,
+.brand-logo {
+  font-family: "Leckerli One", cursive;
+  font-weight: bold;
+}
+#home,
 .portfolio {
   height: 90vh;
   width: 100%;
@@ -19,14 +26,23 @@ nav {
 .marginTop {
   margin-top: 10vh;
 }
+.section-title {
+  text-align: center;
+}
 #resume-btn,
-#submit-contact-btn {
+#submit-contact-btn,
+#view-code-btn,
+#visit-website-btn {
   border: 1px solid white;
   border-radius: 5px;
   color: white;
 }
 #social-accounts {
   margin: 20px 15% 0 15%;
+  transition: 0.7s;
+}
+#social-accounts a:hover {
+  opacity: 0.7;
 }
 
 #toast-container {
@@ -34,4 +50,34 @@ nav {
   right: auto !important;
   bottom: 90%;
   left: auto !important;
+}
+
+.carousel {
+  position: relative;
+}
+.slick-prev,
+.slick-next {
+  position: absolute;
+  top: 50%;
+}
+.slick-prev {
+  left: 1px;
+  z-index: 10;
+  /* background-color: #419be0; */
+}
+.slick-next {
+  right: 1px;
+  z-index: 10;
+  /* background-color: #419be0; */
+}
+.slick-dots {
+  bottom: 10px;
+}
+.project-info {
+  padding-left: 35px !important;
+}
+.slick-slide {
+  text-align: center;
+  color: white;
+  background: inherit;
 }
