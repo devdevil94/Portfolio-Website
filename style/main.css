@@ -8,6 +8,7 @@ body {
 }
 nav {
   background-image: inherit;
+  padding: 0 5%;
 }
 #home,
 .portfolio {
@@ -69,4 +70,16 @@ nav {
   text-align: center;
   color: white;
   background: inherit;
+}
+
+@-webkit-keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
 }

@@ -52,7 +52,7 @@ $(document).ready(function() {
           createPortfolio();
           $(".carousel").slick({
             dots: true,
-            arrows: false,
+            arrows: true,
             slidesToShow: 1,
             slidesToScroll: 1
           });
