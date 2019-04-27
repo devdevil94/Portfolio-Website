@@ -4,11 +4,17 @@
   box-sizing: border-box;
 }
 body {
-  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  /* background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%); */
+  /* background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%); */
+  background-image: linear-gradient(to right, #09203f 0%, #537895 100%);
 }
 nav {
   background-image: inherit;
   padding: 0 5%;
+}
+.brand-logo {
+  font-family: "Leckerli One", cursive;
+  font-weight: bold;
 }
 #home,
 .portfolio {
@@ -33,6 +39,10 @@ nav {
 }
 #social-accounts {
   margin: 20px 15% 0 15%;
+  transition: 0.7s;
+}
+#social-accounts a:hover {
+  opacity: 0.7;
 }
 
 #toast-container {
@@ -70,16 +80,4 @@ nav {
   text-align: center;
   color: white;
   background: inherit;
-}
-
-@-webkit-keyframes zoomIn {
-  from {
-    opacity: 0;
-    -webkit-transform: scale3d(0.3, 0.3, 0.3);
-    transform: scale3d(0.3, 0.3, 0.3);
-  }
-
-  50% {
-    opacity: 1;
-  }
 }
