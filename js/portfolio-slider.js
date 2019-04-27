@@ -14,23 +14,49 @@ const createPortfolio = () => {
   }
 };
 const createProjectInfoDiv = project => {
-  const { skills, description } = project;
-  const skillsList = $("<ul></ul>");
+  const { description } = project;
 
-  for (let i = 0; i < skills.length; i++) {
-    const skillItem = $("<li></li>").text(skills[i]);
-    skillsList.append(skillItem);
-  }
   const descParagraph = $("<p></p>").text(description);
   const skillsHeader = $("<h5></h5>").text("Skills");
   const infoColDiv = $("<div></div>");
   infoColDiv.attr("class", "col xl6 lg6 m6 left-align project-info");
   infoColDiv.append(descParagraph);
   infoColDiv.append(skillsHeader);
-  infoColDiv.append(skillsList);
+  infoColDiv.append(createSkillsListDiv(project));
   infoColDiv.append(createProjectButtonsDiv(project));
 
   return infoColDiv;
+};
+
+const createSkillsListDiv = project => {
+  const { skills } = project;
+  const numOfSkills = skills.length;
+  const numOfSkillsInLeftCol =
+    numOfSkills % 2 == 0 ? numOfSkills / 2 : (numOfSkills + 1) / 2;
+  console.log(numOfSkillsInLeftCol);
+  const leftCol = $("<div></div>").attr("class", "col xl6 lg6 m6 s6");
+  const rightCol = $("<div></div>").attr("class", "col xl6 lg6 m6 s6");
+
+  const skillsListLeft = $("<ul></ul>");
+  const skillsListRight = $("<ul></ul>");
+
+  for (let i = 0; i < numOfSkillsInLeftCol; i++) {
+    const skillItem = $("<li></li>").text(skills[i]);
+    skillsListLeft.append(skillItem);
+  }
+  leftCol.append(skillsListLeft);
+
+  for (let i = numOfSkillsInLeftCol; i < numOfSkills; i++) {
+    const skillItem = $("<li></li>").text(skills[i]);
+    skillsListRight.append(skillItem);
+  }
+  rightCol.append(skillsListRight);
+
+  const skillsListRow = $("<div></div>").addClass("row");
+  skillsListRow.append(leftCol);
+  skillsListRow.append(rightCol);
+
+  return skillsListRow;
 };
 
 const createMockupDiv = project => {
