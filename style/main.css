@@ -6,7 +6,8 @@
 body {
   /* background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%); */
   /* background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%); */
-  background-image: linear-gradient(to right, #09203f 0%, #537895 100%);
+  /* background-image: linear-gradient(to right, #09203f 0%, #537895 100%); */
+  background-image: linear-gradient(to right, #48c6ef 0%, #6f86d6 100%);
 }
 nav {
   background-image: inherit;
@@ -16,33 +17,40 @@ nav {
   font-family: "Leckerli One", cursive;
   font-weight: bold;
 }
-#home,
-.portfolio {
-  height: 90vh;
-  width: 100%;
-  position: absolute;
-  text-align: center;
+
+* {
+  font-family: "Roboto", sans-serif;
 }
 .marginTop {
   margin-top: 10vh;
 }
+.marginBtm {
+  margin-bottom: 10px;
+}
 .section-title {
   text-align: center;
+  font-weight: bold;
 }
 #resume-btn,
 #submit-contact-btn,
 #view-code-btn,
 #visit-website-btn {
-  border: 1px solid white;
+  border: 1px solid #ffeb3b;
   border-radius: 5px;
-  color: white;
+  color: #ffeb3b;
+}
+#resume-btn:hover,
+#submit-contact-btn:hover,
+#view-code-btn:hover,
+#visit-website-btn:hover {
+  background-color: #fff;
 }
 #social-accounts {
   margin: 20px 15% 0 15%;
   transition: 0.7s;
 }
-#social-accounts a:hover {
-  opacity: 0.7;
+#social-accounts a:hover .fab {
+  color: #ffeb3b;
 }
 
 #toast-container {
@@ -73,8 +81,18 @@ nav {
 .slick-dots {
   bottom: 10px;
 }
+.slick-dots li button {
+  background-color: #ffeb3b;
+  border-radius: 100%;
+}
+.slick-dots li.slick-active button {
+  background-color: #fff;
+}
 .project-info {
   padding-left: 35px !important;
+}
+.project-description {
+  font-size: 1.1rem;
 }
 .slick-slide {
   text-align: center;

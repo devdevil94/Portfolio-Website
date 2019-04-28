@@ -16,8 +16,12 @@ const createPortfolio = () => {
 const createProjectInfoDiv = project => {
   const { description } = project;
 
-  const descParagraph = $("<p></p>").text(description);
-  const skillsHeader = $("<h5></h5>").text("Skills");
+  const descParagraph = $("<p></p>")
+    .text(description)
+    .addClass("project-description");
+  const skillsHeader = $("<h5></h5>")
+    .text("Skills")
+    .addClass("yellow-text");
   const infoColDiv = $("<div></div>");
   infoColDiv.attr("class", "col xl6 lg6 m6 left-align project-info");
   infoColDiv.append(descParagraph);
@@ -33,7 +37,7 @@ const createSkillsListDiv = project => {
   const numOfSkills = skills.length;
   const numOfSkillsInLeftCol =
     numOfSkills % 2 == 0 ? numOfSkills / 2 : (numOfSkills + 1) / 2;
-  console.log(numOfSkillsInLeftCol);
+
   const leftCol = $("<div></div>").attr("class", "col xl6 lg6 m6 s6");
   const rightCol = $("<div></div>").attr("class", "col xl6 lg6 m6 s6");
 
@@ -65,7 +69,10 @@ const createMockupDiv = project => {
     .attr("src", imgSrc)
     .addClass("responsive-img");
 
-  const mockupColDiv = $("<div></div>").attr("class", "col xl6 lg6 m6");
+  const mockupColDiv = $("<div></div>").attr(
+    "class",
+    "col xl6 lg6 m6 hide-on-small-only"
+  );
   mockupColDiv.append(mockupImg);
 
   return mockupColDiv;
@@ -91,10 +98,10 @@ const createProjectButtonsDiv = project => {
     .text("Visit Website");
 
   const btnColLeft = $("<div></div>")
-    .attr("class", "col s6")
+    .attr("class", "col xl6 lg6 m12 s6 marginBtm")
     .append(viewCodeBtn);
   const btnColRight = $("<div></div>")
-    .attr("class", "col s6")
+    .attr("class", "col xl6 lg6 m12 s6")
     .append(visitWebsiteBtn);
 
   const buttonsRowDiv = $("<div></div>").addClass("row");

@@ -33,7 +33,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
     />
     <link
-      href="https://fonts.googleapis.com/css?family=Leckerli+One"
+      href="https://fonts.googleapis.com/css?family=Leckerli+One|Roboto"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style/main.css" />
@@ -43,7 +43,7 @@
   <body>
     <nav class="z-depth-0">
       <div class="nav-wrapper">
-        <a href="#!" class="brand-logo left">Saud</a>
+        <a href="index.html" class="brand-logo left">Saud</a>
         <ul id="nav-links" class="right">
           <li class="active"><a>HOME</a></li>
           <li><a>ABOUT</a></li>
@@ -53,7 +53,7 @@
       </div>
     </nav>
     <main>
-      <section id="home" class="animated zoomIn">
+      <section id="home" class="animated zoomIn center">
         <div class="home-content container">
           <div class="row">
             <div id="" class="col xl12 lg12 m12 s12 white-text">
@@ -78,9 +78,9 @@
       <section id="about" class="hide animated zoomIn">
         <div class="about-content container">
           <div class="row">
-            <div class="center-align col xl12 lg12 m12 s12">
-              <h3 class="section-title">ABOUT</h3>
-              <h5>
+            <div class="center-align col xl12 lg12 m12 s12 white-text">
+              <h3 class="section-title yellow-text">ABOUT ME</h3>
+              <h5 class="container">
                 Lorem ipsum dolor sit amet, vidisse corpora intellegebat ne pri.
                 Eam at quod iudicabit definitiones, at graeci vidisse oblique
                 has. Mea ea elitr tibique, te oportere sententiae ius. Ullum
@@ -97,7 +97,9 @@
         <div class="portfolio-content container">
           <div class="row">
             <div class="col xl12 lg12 m12 s12">
-              <h3 class="section-title">PORTFOLIO</h3>
+              <h3 class="section-title yellow-text">
+                PORTFOLIO
+              </h3>
               <div class="carousel"></div>
             </div>
           </div>
@@ -106,15 +108,20 @@
       <section id="contact" class="hide animated zoomIn">
         <div class="contact-content container">
           <div class="row">
-            <div class="center-align col xl6 lg4 m4 s4 offset-xl3">
-              <h3 class="section-title">CONTACT ME</h3>
+            <div class="center-align col xl6 lg6 m12 s12 offset-xl3 offset-lg3">
+              <h3 class="section-title yellow-text">
+                CONTACT ME
+              </h3>
               <div class="row">
                 <form id="contact-form" class="col s12">
                   <div class="row">
                     <div class="input-field col s6">
                       <input id="name" type="text" class="validate" required />
                       <label for="name">Name</label>
-                      <span class="helper-text" data-error="Error"></span>
+                      <span
+                        class="helper-text"
+                        data-error="Something is wrong!"
+                      ></span>
                     </div>
                   </div>
                   <div class="row">
@@ -126,6 +133,10 @@
                         required
                       />
                       <label for="email">Email</label>
+                      <span
+                        class="helper-text"
+                        data-error="Something is wrong!"
+                      ></span>
                     </div>
                   </div>
                   <div class="row">
