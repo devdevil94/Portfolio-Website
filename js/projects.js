@@ -4,7 +4,13 @@ const projects = [
     description:
       "Lorem ipsum dolor sit amet, vidisse corpora intellegebat ne pri. Eam at quod iudicabit definitiones, at graeci vidisse oblique has.",
     imgSrc: "../images/smartmockups_jux4p0lc.png",
-    skills: ["HTML", "Javascript", "CSS", "Materialize CSS"],
+    skills: [
+      "HTML",
+      "Javascript",
+      "CSS",
+      "Responsive Design",
+      "Materialize CSS"
+    ],
     repo: "travel_repo",
     demolink: "travel_demo"
   },
@@ -13,9 +19,9 @@ const projects = [
     description:
       "Lorem ipsum dolor sit amet, vidisse corpora intellegebat ne pri. Eam at quod iudicabit definitiones, at graeci vidisse oblique has.",
     imgSrc: "../images/smartmockups_jux4p0lc.png",
-    skills: ["WordPress", "HTML", "Javascript", "CSS", "Materialize CSS"],
+    skills: ["WordPress", "HTML", "Javascript", "CSS", "Responsive Design"],
     repo: "devdevil_repo",
-    demolink: "https://www.devdevil.co"
+    demolink: "http://devdevil.co"
   }
   // ,
   // {
