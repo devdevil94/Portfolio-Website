@@ -17,6 +17,9 @@ nav {
   font-family: "Leckerli One", cursive;
   font-weight: bold;
 }
+.brand-logo:hover {
+  color: #ffeb3b;
+}
 
 * {
   font-family: "Roboto", sans-serif;
@@ -28,6 +31,7 @@ nav {
   margin-bottom: 10px;
 }
 .section-title {
+  font-family: "Leckerli One", cursive;
   text-align: center;
   font-weight: bold;
 }
@@ -98,4 +102,10 @@ nav {
   text-align: center;
   color: white;
   background: inherit;
+}
+.input-field label {
+  color: white;
+}
+.input-field input:focus {
+  border-bottom: 1px solid #000;
 }
