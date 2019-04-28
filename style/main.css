@@ -20,7 +20,12 @@ nav {
 .brand-logo:hover {
   color: #ffeb3b;
 }
-
+#mobile-menu {
+  background-image: inherit;
+}
+#mobile-menu li a {
+  color: #fff;
+}
 * {
   font-family: "Roboto", sans-serif;
 }

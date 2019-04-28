@@ -44,7 +44,10 @@
     <nav class="z-depth-0">
       <div class="nav-wrapper">
         <a href="index.html" class="brand-logo left">Saud</a>
-        <ul id="nav-links" class="right">
+        <a href="#" data-target="mobile-menu" class="sidenav-trigger right"
+          ><i class="material-icons">menu</i></a
+        >
+        <ul class="right hide-on-med-and-down nav-links">
           <li class="active"><a>HOME</a></li>
           <li><a>ABOUT</a></li>
           <li><a>PORTFOLIO</a></li>
@@ -52,12 +55,18 @@
         </ul>
       </div>
     </nav>
+    <ul id="mobile-menu" class="sidenav nav-links">
+      <li class="active"><a>HOME</a></li>
+      <li><a>ABOUT</a></li>
+      <li><a>PORTFOLIO</a></li>
+      <li><a>CONTACT</a></li>
+    </ul>
     <main>
       <section id="home" class="animated zoomIn center">
         <div class="home-content container">
           <div class="row">
             <div id="" class="col xl12 lg12 m12 s12 white-text">
-              <h2>Saud Al-Alawi</h2>
+              <h2 class="yellow-text">Saud Al-Alawi</h2>
               <h4>Front-End Web Developer</h4>
               <a
                 id="resume-btn"
@@ -98,7 +107,7 @@
           <div class="row">
             <div class="col xl12 lg12 m12 s12">
               <h3 class="section-title yellow-text">
-                PORTFOLIO
+                MY PORTFOLIO
               </h3>
               <div class="carousel"></div>
             </div>
@@ -165,7 +174,7 @@
       </section>
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
     <script
       type="text/javascript"
       src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"

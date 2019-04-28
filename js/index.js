@@ -1,23 +1,12 @@
-// Initialize Firebase
-var config = {
-  apiKey: "AIzaSyDejbSdlutY0ZJAj6cl6f2KET68qUkPOiY",
-  authDomain: "portfolio-contact-form-8a905.firebaseapp.com",
-  databaseURL: "https://portfolio-contact-form-8a905.firebaseio.com",
-  projectId: "portfolio-contact-form-8a905",
-  storageBucket: "portfolio-contact-form-8a905.appspot.com",
-  messagingSenderId: "932210990533"
-};
-// firebase.initializeApp(config);
-
-// const messagesRef = firebase.database().ref("messages");
-
 $(document).ready(function() {
+  $(".sidenav").sidenav();
+
   let portfolioCreated = false;
 
-  const navLinks = $("#nav-links li a");
+  const navLinks = $(".nav-links li a");
 
   navLinks.click(e => {
-    $("#nav-links")
+    $(".nav-links")
       .find("li.active")
       .removeClass("active");
     $(e.target)
@@ -71,9 +60,22 @@ $(document).ready(function() {
   });
 });
 
-// document.getElementById("contact-form").addEventListener("submit", e => {
-//   submitForm(e);
-// });
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyDejbSdlutY0ZJAj6cl6f2KET68qUkPOiY",
+  authDomain: "portfolio-contact-form-8a905.firebaseapp.com",
+  databaseURL: "https://portfolio-contact-form-8a905.firebaseio.com",
+  projectId: "portfolio-contact-form-8a905",
+  storageBucket: "portfolio-contact-form-8a905.appspot.com",
+  messagingSenderId: "932210990533"
+};
+firebase.initializeApp(config);
+
+const messagesRef = firebase.database().ref("messages");
+
+document.getElementById("contact-form").addEventListener("submit", e => {
+  submitForm(e);
+});
 
 const submitForm = e => {
   e.preventDefault();
